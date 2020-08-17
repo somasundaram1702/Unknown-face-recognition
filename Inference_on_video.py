@@ -10,10 +10,10 @@ class inference():
 
   def load_model(self):
 
-      with open('EVM_model.pkl','rb') as b:
+      with open('./outputs/EVM_model.pkl','rb') as b:
           self.mevm = pickle.load(b)
 
-      with open('class_names.pkl','rb') as cl:
+      with open('./outputs/class_names.pkl','rb') as cl:
           self.cls_names = pickle.load(cl)
 
   def read_video(self,path):
@@ -22,7 +22,7 @@ class inference():
       width, height = self.cap.get(cv2.CAP_PROP_FRAME_WIDTH), self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
       fourcc=cv2.VideoWriter_fourcc('M','J','P','G')
       #fourcc = cv2.cv.CV_FOURCC(*'XVID')
-      self.videowriter = cv2.VideoWriter('output_video.avi', fourcc, 20, (int(width),int(height),))
+      self.videowriter = cv2.VideoWriter('./outputs/output_video.avi', fourcc, 20, (int(width),int(height),))
 
       #Facetection class to be loaded
       self.df = detect_face()
