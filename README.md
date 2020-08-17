@@ -48,7 +48,7 @@ Test
 ```
 A sample video is also given, which can be used at the end, for inference. Basically there are 3 types that needs to executed
 
-#### step 1
+#### Step 1
 
 Unzip the dataset folder
 
@@ -67,7 +67,7 @@ After running the above commands, a new folder named "outputs" will be created a
   * Extracted_faces.npz
   * Extracted_embeddings.npz
   
-#### step 2
+#### Step 2
 
 Run the Train EVM file to train the EVM model for openset classification
 
@@ -88,7 +88,7 @@ Except accuracy, rest 3 above values are hyperparameters for training the model.
 python train_evm.py --help
 ```
 
-#### step 3
+#### Step 3
 
 Finally the sample video can be inferenced by the below command
 
@@ -96,7 +96,7 @@ Finally the sample video can be inferenced by the below command
 python Inference_on_video.py --video_path ./tarantino.mp4
 ```
 
-The infered frames and the results of each frame will be printed.
+The inferred frames and the results of each frame will be printed.
 
 ### How to train your own dataset
 
@@ -111,7 +111,18 @@ To train your own dataset, follow the below steps,
 
 Then follow step 1, 2 and 3 to get the final inferenced video. The Final inference video will be present inside the outputs folder.
 
+### How to run in colab
 
+Running this model in colab is simple and easy. Clone or download the entire repository. Note there is a '.ipynb' file inside the folder. Open this file in colab.
+All the necessary codes to run the model are already in the file. Just make the below files are present in the working directory,
+
+  * Mini_casia.zip
+  * Facenet_keras.h5
+  * tarantino.mp4 (video file)
+
+Then you call run all the cells in the '.ipynb' file. The output video will be in the "outputs" folder. 
+
+Note: The 'ipynb' file is already with all the cells executed and you can check the results of running the folder. 
   
   
   
