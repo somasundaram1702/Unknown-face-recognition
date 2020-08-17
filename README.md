@@ -81,6 +81,7 @@ The below values will be displayed after successfull training
   * Distance multiplier
   * Cover threshold
   * tail_size
+  
 Except accuracy, rest 3 values are the hyperparameters for training the model. These parameters can be changed or fed in manually. Please use the below commands to check the different arguments to pass
 
 ```
