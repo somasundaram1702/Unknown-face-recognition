@@ -4,13 +4,16 @@ Face recognition is a method of identifying or naming individuals/group using th
 
 ## How to use ?
 
-To use the repository either clone or download and run it in local machine or you can set this up in google colab.
+To use the repository either clone or download and run it in local machine or you can set this up in google colab. First lets see how to run in local machine.
 
 ### How to run in local machine
-TO run in local machine please make sure you have all the below packages installed in the your virtual environment
+To run in local machine please make sure you have all the below packages installed in the your virtual environment
 Required packages to run in local machine:
  1) Python 3.7.7
- 2) Matplotlib
+ 2) Matplotlib 
+     '''
+     pip install matplotlib==3.3.1
+     '''
  3) Cython>=0.17
  4) Tensorflow
  5) Opencv : python-opencv>=4.1.0
