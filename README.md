@@ -6,7 +6,7 @@ Face recognition is a method of identifying or naming individuals/group using th
 
 To use the repository either clone or download and run it in local machine or you can set this up in google colab. First lets see how to run in local machine.
 
-### How to run in local machine
+## How to run in local machine ?
 To run in local machine please make sure you have all the below packages installed in the your virtual environment
 Required packages to run in local machine:
 
@@ -22,10 +22,6 @@ Required packages to run in local machine:
   pip install numpy
   pip install sklearn
   ```
-    
-
-  
-### How to run in local machine?
 
 Clone/download the repository and extract the folder. Make sure your current working directory is "Unknown-face-recognition". 
 You can use "cd ./unknown-face-recognition" to get inside the folder. The repository already has some train and test folders 
@@ -48,7 +44,7 @@ Test
 ```
 A sample video is also given, which can be used at the end, for inference. Basically there are 3 types that needs to executed
 
-#### step 1
+#### Step 1
 
 Unzip the dataset folder
 
@@ -67,7 +63,7 @@ After running the above commands, a new folder named "outputs" will be created a
   * Extracted_faces.npz
   * Extracted_embeddings.npz
   
-#### step 2
+#### Step 2
 
 Run the Train EVM file to train the EVM model for openset classification
 
@@ -88,7 +84,7 @@ Except accuracy, rest 3 above values are hyperparameters for training the model.
 python train_evm.py --help
 ```
 
-#### step 3
+#### Step 3
 
 Finally the sample video can be inferenced by the below command
 
@@ -96,7 +92,7 @@ Finally the sample video can be inferenced by the below command
 python Inference_on_video.py --video_path ./tarantino.mp4
 ```
 
-The infered frames and the results of each frame will be printed.
+The inferred frames and the results of each frame will be printed.
 
 ### How to train your own dataset
 
@@ -111,7 +107,18 @@ To train your own dataset, follow the below steps,
 
 Then follow step 1, 2 and 3 to get the final inferenced video. The Final inference video will be present inside the outputs folder.
 
+## How to run in colab
 
+Running this model in colab is simple and easy. Clone or download the entire repository. Note there is a '.ipynb' file inside the folder. Open this file in colab.
+All the necessary codes to run the model are already in the file. Just make the below files are present in the working directory,
+
+  * Mini_casia.zip
+  * Facenet_keras.h5
+  * tarantino.mp4 (video file)
+
+Then you call run all the cells in the '.ipynb' file. The output video will be in the "outputs" folder. 
+
+Note: The 'ipynb' file is already with all the cells executed and you can check the results of running the folder. 
   
   
   
