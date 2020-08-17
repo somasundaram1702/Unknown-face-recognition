@@ -6,7 +6,7 @@ Face recognition is a method of identifying or naming individuals/group using th
 
 To use the repository either clone or download and run it in local machine or you can set this up in google colab. First lets see how to run in local machine.
 
-## How to run in local machine
+## How to run in local machine ?
 To run in local machine please make sure you have all the below packages installed in the your virtual environment
 Required packages to run in local machine:
 
@@ -22,10 +22,6 @@ Required packages to run in local machine:
   pip install numpy
   pip install sklearn
   ```
-    
-
-  
-### How to run in local machine?
 
 Clone/download the repository and extract the folder. Make sure your current working directory is "Unknown-face-recognition". 
 You can use "cd ./unknown-face-recognition" to get inside the folder. The repository already has some train and test folders 
