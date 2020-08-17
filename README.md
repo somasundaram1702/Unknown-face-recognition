@@ -46,7 +46,57 @@ Test
 |____ hank
 |____ neve
 ```
-A sample video is also given, which can be used at the end for inference. Explanation on how to run your own dataset is given below in the section. 
+A sample video is also given, which can be used at the end, for inference. Basically there are 3 types that needs to executed
+
+#### step 1
+
+Unzip the dataset folder
+
+```
+unzip ./Mini_Casia
+```
+
+Run the Extract embeddings file to extract features from all the faces
+
+```
+python extract_embeds.py --input_path ./Mini_casia
+```
+
+After running the above commands, a new folder named "outputs" will be created and the below 2 files should be present
+    
+  * Extracted_faces.npz
+  * Extracted_embeddings.npz
+  
+#### step 2
+
+Run the Train EVM file to train the EVM model for openset classification
+
+```
+python train_evm.py --Embeds_path ./outputs/Extracted_embeddings.npz
+```
+
+The below values will be displayed after successfull training
+
+  * Accuracy
+  * Distance multiplier
+  * Cover threshold
+  * tail_size
+Except accuracy, rest 3 values are the hyperparameters for training the model. These parameters can be changed or fed in manually. Please use the below commands to check the different arguments to pass
+
+```
+python train_evm.py --help
+```
+
+####
+
+
+
+
+
+
+
+
+Explanation on how to run your own dataset is given below in the section. 
 
 How to run in Colab?
 
