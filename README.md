@@ -51,9 +51,14 @@ Required packages to run in local machine:
     pip install sklearn
     ```
   
-How to run in local machine?
+### How to run in local machine?
 
-Clone/download the repository and extract the folder. Then use cd ./unknown-face-recognition to get inside the folder. 
+Clone/download the repository and extract the folder. Then use "cd ./unknown-face-recognition" to get inside the folder. The repository already has some train and test folders inside Mini_casia.zip file. Unzip the folder. The structure of the train and test folder is shown below,
+
+Train
+|____ tarantino
+|____ mille
+
 
 
 
