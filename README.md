@@ -53,6 +53,8 @@ Required packages to run in local machine:
   
 How to run in local machine?
 
+Clone/download the repository and extract the folder. Then use cd ./unknown-face-recognition to get inside the folder. 
+
 
 
 How to run in Colab?
