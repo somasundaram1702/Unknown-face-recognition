@@ -9,15 +9,8 @@ To use the repository either clone or download and run it in local machine or yo
 ### How to run in local machine
 To run in local machine please make sure you have all the below packages installed in the your virtual environment
 Required packages to run in local machine:
- 1) Python 3.7.7
- 2) Matplotlib 
- 3) Cython>=0.17
- 4) Tensorflow
- 5) Opencv
- 6) MTCNN 
- 7) EVM
- 8) numpy
- 9) sklearn
+
+ * Python 3.7.7, Matplotlib, Cython>=0.17, Tensorflow, Opencv, MTCNN, EVM, numpy, sklearn
  
  ```
   pip install matplotlib==3.3.1
@@ -34,32 +27,26 @@ Required packages to run in local machine:
   
 ### How to run in local machine?
 
-Clone/download the repository and extract the folder. Then use "cd ./unknown-face-recognition" to get inside the folder. The repository already has some train and test folders inside Mini_casia.zip file. Unzip the folder. The structure of the train and test folder is shown below,
+Clone/download the repository and extract the folder. Make sure your current working directory is "Unknown-face-recognition". 
+You can use "cd ./unknown-face-recognition" to get inside the folder. The repository already has some train and test folders 
+inside Mini_casia.zip. The structure of the train and test folder is shown below,
 
 ```
-Mini_caisa
+Mini_casia
 
 Train
 |____ tarantino
-|
 |____ mille
-|
 |____ hank
-|
 |____ neve
-|
 
 Test
 |____ tarantino
-|
 |____ mille
-|
 |____ hank
-|
 |____ neve
-|
 ```
-
+A sample video is also given, which can be used at the end for inference. Explanation on how to run your own dataset is given below in the section. 
 
 How to run in Colab?
 
