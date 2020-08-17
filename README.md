@@ -6,7 +6,7 @@ Face recognition is a method of identifying or naming individuals/group using th
 
 To use the repository either clone or download and run it in local machine or you can set this up in google colab. First lets see how to run in local machine.
 
-### How to run in local machine
+## How to run in local machine
 To run in local machine please make sure you have all the below packages installed in the your virtual environment
 Required packages to run in local machine:
 
@@ -111,7 +111,7 @@ To train your own dataset, follow the below steps,
 
 Then follow step 1, 2 and 3 to get the final inferenced video. The Final inference video will be present inside the outputs folder.
 
-### How to run in colab
+## How to run in colab
 
 Running this model in colab is simple and easy. Clone or download the entire repository. Note there is a '.ipynb' file inside the folder. Open this file in colab.
 All the necessary codes to run the model are already in the file. Just make the below files are present in the working directory,
