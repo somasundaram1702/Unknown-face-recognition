@@ -11,9 +11,9 @@ To run in local machine please make sure you have all the below packages install
 Required packages to run in local machine:
  1) Python 3.7.7
  2) Matplotlib 
-     '''
+     ```
      pip install matplotlib==3.3.1
-     '''
+     ```
  3) Cython>=0.17
  4) Tensorflow
  5) Opencv : python-opencv>=4.1.0
