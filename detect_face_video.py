@@ -24,7 +24,7 @@ class detect_face:
         self.detect = MTCNN()
         self.img = None
         self.res = None 
-        self.face = None
+        
 
     
     def vid_detect_face(self,frame):
@@ -33,13 +33,16 @@ class detect_face:
         return(self.res_v)         
     
     def vid_crop_resize(self):
-        x1=self.res_v[0]['box'][0]
-        y1=self.res_v[0]['box'][1]
-        x2=self.res_v[0]['box'][0]+self.res_v[0]['box'][2]
-        y2=self.res_v[0]['box'][1]+self.res_v[0]['box'][3]
-        self.face = self.img_v[y1:y2,x1:x2]
-        self.face = cv2.resize(self.face,(160,160),cv2.INTER_AREA)
-        return(self.face)   
+      self.face = []
+      for i in range(len(self.res_v)):
+        x1=self.res_v[i]['box'][0]
+        y1=self.res_v[i]['box'][1]
+        x2=self.res_v[i]['box'][0]+self.res_v[i]['box'][2]
+        y2=self.res_v[i]['box'][1]+self.res_v[i]['box'][3]
+        self._face = self.img_v[y1:y2,x1:x2]
+        self._face = cv2.resize(self._face,(160,160),cv2.INTER_AREA)
+        self.face.append(self._face)
+      return(self.face)   
     
     def load_facenet(self):
         self.model = load_model('facenet_keras.h5')
@@ -58,4 +61,35 @@ class detect_face:
         in_encoder = Normalizer(norm='l2')
         data = in_encoder.transform(data)
         return(data)
+
+    def draw_detect(self,img):
+    
+     l=25
+     t=2
+     for i in range(len(self.res_v)):
+        x1 = self.res_v[i]['box'][0]
+        y1 = self.res_v[i]['box'][1]
+        x2 = self.res_v[i]['box'][0] + self.res_v[i]['box'][2]
+        y2 = self.res_v[i]['box'][1] + self.res_v[i]['box'][3]
+        
+        cv2.line(img,(x1,y1),(x1+l,y1),(255,0,0),t)
+        cv2.line(img,(x1,y1),(x1,y1+l),(255,0,0),t)
+        
+        cv2.line(img,(x2,y1),(x2-l,y1),(255,0,0),t)
+        cv2.line(img,(x2,y1),(x2,y1+l),(255,0,0),t)
+        
+        cv2.line(img,(x2,y2),(x2-l,y2),(255,0,0),t)
+        cv2.line(img,(x2,y2),(x2,y2-l),(255,0,0),t)
+       
+        cv2.line(img,(x1,y2),(x1+l,y2),(255,0,0),t)
+        cv2.line(img,(x1,y2),(x1,y2-l),(255,0,0),t)
+
+        #cv2.line(img,(x1[i]+int(l/2),y1[i]+int(b/outer_len)),(x1[i]+int(l/2),y1[i]-int(b/inner_len)),(0,255,255),6)
+        #cv2.line(img,(x1[i]+int(l/outer_len),y1[i]+int(b/2)),(x1[i]-int(l/inner_len),y1[i]+int(b/2)),(0,255,255),6)
+        #cv2.line(img,(x1[i]+int(l/2),y1[i]+b-int(b/outer_len)),(x1[i]+int(l/2),y1[i]+b+int(b/inner_len)),(0,255,255),6)
+        #cv2.line(img,(x1[i]+int(l)-int(l/outer_len),y1[i]+int(b/2)),(x1[i]+l+int(l/inner_len),y1[i]+int(b/2)),(0,255,255),6)
+        
+    
+     return(img)
+        
         
