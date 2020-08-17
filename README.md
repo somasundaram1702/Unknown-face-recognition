@@ -22,33 +22,32 @@ Required packages to run in local machine:
     ```
  4) Tensorflow
  
-  ```
+    ```
     pip install tensorflow== 2.3.0
     ```
  5) Opencv
   
-  ```
+    ```
     apt-get install python-opencv
     ```
  6) MTCNN 
  
-  ```
+    ```
     pip install MTCNN
     ```
  7) EVM
    
-  ```
+    ```
     pip install EVM
     ```
  8) numpy
  
-  
-  ```
+    ```
     pip install numpy
     ```
  9) sklearn
   
-  ```
+    ```
     pip install sklearn
     ```
   
