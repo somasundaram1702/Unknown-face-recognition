@@ -82,24 +82,34 @@ The below values will be displayed after successfull training
   * Cover threshold
   * tail_size
   
-Except accuracy, rest 3 values are the hyperparameters for training the model. These parameters can be changed or fed in manually. Please use the below commands to check the different arguments to pass
+Except accuracy, rest 3 above values are hyperparameters for training the model. These parameters can be changed or fed in manually. Please use the below commands to check the different arguments to pass
 
 ```
 python train_evm.py --help
 ```
 
-####
+#### step 3
 
+Finally the sample video can be inferenced by the below command
 
+```
+python Inference_on_video.py --video_path ./tarantino.mp4
+```
 
+The infered frames and the results of each frame will be printed.
 
+### How to train your own dataset
 
+To train your own dataset, follow the below steps,
 
+  * Prepare the dataset, simillar to the structure shown above
+  * Inside the main folder ("Mini_casia" in my case), there should be 2 folders train and test
+  * Inside each folder there should be folders that are labelled with the person's name
+  * Make sure you have 10% of the images in the test folder
+  * Keep a video for final inference inside the root directory ("Unknown_face_recognition)
+  * Delete the "outputs" folders if present
 
-
-Explanation on how to run your own dataset is given below in the section. 
-
-How to run in Colab?
+Then follow step 1, 2 and 3 to get the final inferenced video. The Final inference video will be present inside the outputs folder.
 
 
   
