@@ -116,9 +116,10 @@ All the necessary codes to run the model are already in the file. Just make the 
   * Facenet_keras.h5
   * tarantino.mp4 (video file)
 
-Then you call run all the cells in the '.ipynb' file. The output video will be in the "outputs" folder. 
+The above three files can be transferred or kept in google drive linked to colab notebook. Code cells are available in the '.ipynb' to transfer these files from 
+drive to the current working directory. Then you can run all the cells in the '.ipynb' file. The output video will be in the "outputs" folder. 
 
-Note: The 'ipynb' file is already with all the cells executed and you can check the results of running the folder. 
+Note: Make sure to run the notebook in 'GPU', so that it can run faster. The 'ipynb' file is already with all the cells executed and you can check the results of running the folder. 
   
   
   
