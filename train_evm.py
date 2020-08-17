@@ -90,6 +90,9 @@ class evm_acc:
         with open('EVM_model.pkl','wb') as f:
           pickle.dump(self.mevm,f)
 
+        with open('class_names.pkl','wb') as t:
+            pickle.dump(self.uni_classes,t)
+
 if __name__ == '__main__':
 
       parser = argparse.ArgumentParser()
