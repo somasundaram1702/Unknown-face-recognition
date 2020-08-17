@@ -48,6 +48,9 @@ class extract_embeds:
         return(self.face)
         
     def check_folders(self):
+        if 'outputs' not in os.listdir():
+            os.makedirs('./outputs')
+
         y,x = sorted(os.listdir(self.root_path),key=len)
         assert(x == 'train' or x == 'Train' or x == 'TRAIN')
         assert(y == 'test' or y == 'Test' or y == 'TEST')
@@ -86,7 +89,7 @@ class extract_embeds:
             
             print('Images of '+label + ' under process')
             for pics in os.listdir(self.test_path+'/'+label):
-              if pics.endswith('.jpg'):
+              if pics.endswith('.jpg') or pics.endswith('.jpeg') or pics.endswith('.png') or pics.endswith('.tif'):
                 #print('Name of the pic:',pics)
                 try:
                   face_details = self.identify_face(self.test_path+'/'+label+'/'+pics)
@@ -97,7 +100,7 @@ class extract_embeds:
                   print('Pic {} in {} is not processed'.format(pics,label))
                   continue
         print('time taken to process {} secs'.format(time.time()-start2))
-        savez_compressed('Extracted_faces.npz', self.X_train_faces, self.y_train_faces, self.X_test_faces, self.y_test_faces)
+        savez_compressed('./outputs/Extracted_faces.npz', self.X_train_faces, self.y_train_faces, self.X_test_faces, self.y_test_faces)
         return(self.X_train_faces, self.y_train_faces, self.X_test_faces, self.y_test_faces)
 
     def load_facenet(self):
@@ -133,7 +136,7 @@ class extract_embeds:
         self.newTestX = asarray(self.newTestX)
         print(self.newTestX.shape)                                      
         # save arrays to one file in compressed format
-        savez_compressed('Extracted_embeddings.npz', self.newTrainX, self.y_train_faces, self.newTestX, self.y_test_faces)
+        savez_compressed('./outputs/Extracted_embeddings.npz', self.newTrainX, self.y_train_faces, self.newTestX, self.y_test_faces)
         print('Time taken from reading images to extracting embeds: {} s'.format(time.time()-beginn))
   
 if __name__ == '__main__':
