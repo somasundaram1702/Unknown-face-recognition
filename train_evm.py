@@ -87,10 +87,10 @@ class evm_acc:
 
     def save_model(self):
 
-        with open('EVM_model.pkl','wb') as f:
+        with open('./outputs/EVM_model.pkl','wb') as f:
           pickle.dump(self.mevm,f)
 
-        with open('class_names.pkl','wb') as t:
+        with open('./outputs/class_names.pkl','wb') as t:
             pickle.dump(self.uni_classes,t)
 
 if __name__ == '__main__':
