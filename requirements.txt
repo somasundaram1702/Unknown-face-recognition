@@ -1,0 +1,13 @@
+matplotlib
+sklearn
+cython==0.17
+mtcnn
+tensorflow
+#EVM
+#python-opencv=>4.1.0
+numpy
+#python == 3.7.7
+
+
+
+
