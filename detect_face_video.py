@@ -35,13 +35,14 @@ class detect_face:
     def vid_crop_resize(self):
       self.face = []
       for i in range(len(self.res_v)):
-        x1=self.res_v[i]['box'][0]
-        y1=self.res_v[i]['box'][1]
-        x2=self.res_v[i]['box'][0]+self.res_v[i]['box'][2]
-        y2=self.res_v[i]['box'][1]+self.res_v[i]['box'][3]
-        self._face = self.img_v[y1:y2,x1:x2]
-        self._face = cv2.resize(self._face,(160,160),cv2.INTER_AREA)
-        self.face.append(self._face)
+          if self.res_v[i]['confidence']>=0.90:
+            x1=self.res_v[i]['box'][0]
+            y1=self.res_v[i]['box'][1]
+            x2=self.res_v[i]['box'][0]+self.res_v[i]['box'][2]
+            y2=self.res_v[i]['box'][1]+self.res_v[i]['box'][3]
+            self._face = self.img_v[y1:y2,x1:x2]
+            self._face = cv2.resize(self._face,(160,160),cv2.INTER_AREA)
+            self.face.append(self._face)
       return(self.face)   
     
     def load_facenet(self):
