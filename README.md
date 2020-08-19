@@ -98,12 +98,12 @@ The inferred frames and the results of each frame will be printed.
 
 To train your own dataset, follow the below steps,
 
-  * Prepare the dataset, simillar to the structure shown above
-  * Inside the main folder ("Mini_casia" in my case), there should be 2 folders train and test
-  * Inside each folder there should be folders that are labelled with the person's name
-  * Make sure you have 10% of the images in the test folder
+  * Prepare the dataset, simillar to the tree structure used
+  * Inside the main folder ("Mini_casia" in my case), there should be two folders named "train" and "test"
+  * Inside the train and test folder, there should be folders that are labelled with the person's name
+  * Make sure you have 10% of the total train images in the test folder (atleast one image in each labels inside test folder)
   * Keep a video for final inference inside the root directory ("Unknown_face_recognition)
-  * Delete the "outputs" folders if present
+  * Delete the "outputs" folders if present before running the code.
 
 Then follow step 1, 2 and 3 to get the final inferenced video. The Final inference video will be present inside the outputs folder.
 
