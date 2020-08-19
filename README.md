@@ -1,12 +1,12 @@
 # Unknown-face-recognition
 
-Face recognition is a method of identifying or naming individuals/group using the features extracted from face. As an output of face recognition, a bounding box is drawn on the face and the name of the face is displayed. Face recognition is widely used in many applications like biometric, surveillence etc. But one of the main problem in face recognition is the poor performance in recognizing unknown faces. Unknown faces are the faces that are not used either in training or testing. Most cases, the trianed face recognition model, recognizes an unknown person as one of the trained faces. To overcome this issue, Openset classification approach is followed.
+Face recognition is a method of identifying or naming individuals/group using the features extracted from face. As an output of face recognition, a bounding box is drawn on the face and the name of the face is displayed. Face recognition is widely used in many applications like biometric, surveillance etc. But one of the main problem in face recognition is its poor performance in recognizing unknown faces. Unknown faces are the faces that are used neither during training nor in testing. In most cases, the trained face recognition model, recognizes an unknown person as one of the trained faces. To overcome this issue, Openset classification approach is followed.
 
-## How to use ?
+## How to use?
 
 To use the repository either clone or download and run it in local machine or you can set this up in google colab. First lets see how to run in local machine.
 
-## How to run in local machine ?
+## How to run in local machine?
 To run in local machine please make sure you have all the below packages installed in the your virtual environment
 Required packages to run in local machine:
 
@@ -71,14 +71,14 @@ Run the Train EVM file to train the EVM model for openset classification
 python train_evm.py --Embeds_path ./outputs/Extracted_embeddings.npz
 ```
 
-The below values will be displayed after successfull training
+The below values will be displayed after successful training
 
   * Accuracy
   * Distance multiplier
   * Cover threshold
   * tail_size
   
-Except accuracy, rest 3 above values are hyperparameters for training the model. These parameters can be changed or fed in manually. Please use the below commands to check the different arguments to pass
+Except accuracy, rest 3 above values are hyper parameters for training the model. These parameters can be changed or fed in manually. Please use the below commands to check the different arguments to pass
 
 ```
 python train_evm.py --help
