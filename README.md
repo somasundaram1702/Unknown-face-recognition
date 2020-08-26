@@ -105,7 +105,7 @@ To train your own dataset, follow the below steps,
   * Keep a video for final inference inside the root directory ("Unknown_face_recognition)
   * Delete the "outputs" folders if present before running the code.
 
-Then follow step 1, 2 and 3 to get the final inferenced video. The Final inference video will be present inside the outputs folder.
+Then follow step 1, 2 and 3 to get the final inferenced video. The Final inference video will be inside the outputs folder.
 
 ## How to run in colab
 
